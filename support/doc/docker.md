@@ -25,7 +25,7 @@ cd /your/peertube/directory
 #### Get the latest Compose file
 
 ```shell
-curl https://raw.githubusercontent.com/chocobozzz/PeerTube/master/support/docker/production/docker-compose.yml > docker-compose.yml
+curl -Lo docker-compose.yaml https://raw.githubusercontent.com/chocobozzz/PeerTube/master/support/docker/production/docker-compose.yml
 ```
 
 View the source of the file you're about to download: [docker-compose.yml](https://github.com/Chocobozzz/PeerTube/blob/master/support/docker/production/docker-compose.yml)
@@ -33,7 +33,7 @@ View the source of the file you're about to download: [docker-compose.yml](https
 #### Get the latest env_file
 
 ```shell
-curl https://raw.githubusercontent.com/Chocobozzz/PeerTube/master/support/docker/production/.env > .env
+curl -Lo .env https://raw.githubusercontent.com/Chocobozzz/PeerTube/master/support/docker/production/.env
 ```
 
 View the source of the file you're about to download: [.env](https://github.com/Chocobozzz/PeerTube/blob/master/support/docker/production/.env)
@@ -72,7 +72,7 @@ The container will generate the configuration by replacing `${WEBSERVER_HOST}` a
 
 ```shell
 mkdir -p docker-volume/nginx
-curl https://raw.githubusercontent.com/Chocobozzz/PeerTube/master/support/nginx/peertube > docker-volume/nginx/peertube
+curl -Lo docker-volume/nginx/peertube https://raw.githubusercontent.com/Chocobozzz/PeerTube/master/support/nginx/peertube
 ```
 
 You need to manually generate the first SSL/TLS certificate using Let's Encrypt:
